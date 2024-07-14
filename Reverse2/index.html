@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reverse String Without Methods</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    input, button {
+        padding: 10px;
+        font-size: 16px;
+        margin: 10px;
+    }
+    #output {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <h2>Reverse String Without Methods</h2>
+    <label for="str">Enter a string:</label>
+    <input type="text" id="str" required>
+    <button onclick="reverseString()">Reverse</button>
+    <p id="output">Reversed string will be displayed here.</p>
+
+    <script>
+        function reverseString() {
+            var inputStr = document.getElementById('str').value;
+            var reversedStr = reverseWithoutMethods(inputStr);
+            document.getElementById('output').textContent = 'Reversed String: ' + reversedStr;
+        }
+
+        function reverseWithoutMethods(str) {
+            var reversed = '';
+            for (var i = str.length - 1; i >= 0; i--) {
+                reversed += str[i];
+            }
+            return reversed;
+        }
+    </script>
+</body>
+</html>
